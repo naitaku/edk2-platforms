@@ -313,7 +313,6 @@ DmarTableUpdate (
   UINTN               Offset;
   UINTN               StructureLen;
   UINT64              McD0BaseAddress;
-  UINT32              GttMmAdr;
   UINT64              McD2BaseAddress;
   UINT16              IgdMode;
   UINT16              GttMode;
@@ -382,7 +381,6 @@ DmarTableUpdate (
   }
 
   McD2BaseAddress = PCI_SEGMENT_LIB_ADDRESS (SA_SEG_NUM, IGD_BUS_NUM, IGD_DEV_NUM, IGD_FUN_NUM, 0);
-  GttMmAdr = (PciSegmentRead32 (McD2BaseAddress + R_SA_IGD_GTTMMADR)) & 0xFFFFFFF0;
 
   DmarTable->RmrrIgd.RmrrHeader.ReservedMemoryRegionBaseAddress   = (PciSegmentRead32 (McD0BaseAddress + R_SA_BGSM) & ~(0x01));
   DmarTable->RmrrIgd.RmrrHeader.ReservedMemoryRegionLimitAddress  = DmarTable->RmrrIgd.RmrrHeader.ReservedMemoryRegionBaseAddress + IgdMemSize + GttMemSize - 1;
