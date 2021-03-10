@@ -47,7 +47,7 @@ CurrentLanguageMatch (
   }
 
   LangMatch = FALSE;
-  Status = GetEfiGlobalVariable2 (L"PlatformLang", &CurrentLang, NULL);
+  Status = GetEfiGlobalVariable2 (L"PlatformLang", (VOID **)&CurrentLang, NULL);
   if (EFI_ERROR (Status)) {
     return FALSE;
   }

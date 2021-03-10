@@ -319,7 +319,7 @@ MISC_SMBIOS_TABLE_FUNCTION (MiscProcessorInformation)
     SmbiosRecord->Hdr.Handle = 0;
 
     SmbiosRecord-> Socket= 1;
-    SmbiosRecord -> ProcessorManufacture = 2;
+    SmbiosRecord -> ProcessorManufacturer = 2;
     SmbiosRecord -> ProcessorVersion = 3;
     SmbiosRecord ->SerialNumber =4;
 
