@@ -389,6 +389,8 @@ DEBUG_CODE_END();
       case GpioPadLockOutputRegister:
         GpioGetPadCfgLockTxForGroupDw (Group, DwNum, &OldPadCfgLockRegVal);
         break;
+      default:
+        return EFI_INVALID_PARAMETER;
     }
     if (Unlock) {
       NewPadCfgLockRegVal = OldPadCfgLockRegVal & (~(0x1 << PadNumber));
@@ -422,6 +424,8 @@ DEBUG_CODE_END();
       case GpioPadLockOutputRegister:
         GpioGetPadCfgLockTxForGroupDw (Group, DwNum, &OldPadCfgLockRegVal);
         break;
+      default:
+        return EFI_INVALID_PARAMETER;
     }
     if (Unlock) {
       NewPadCfgLockRegVal = OldPadCfgLockRegVal & (~PadsToModify);
