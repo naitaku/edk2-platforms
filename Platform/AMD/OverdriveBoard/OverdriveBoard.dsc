@@ -126,6 +126,7 @@ DEFINE X64EMU_ENABLE  = FALSE
   RngLib|MdePkg/Library/DxeRngLib/DxeRngLib.inf
   TlsLib|CryptoPkg/Library/TlsLib/TlsLib.inf
   VariablePolicyLib|MdeModulePkg/Library/VariablePolicyLib/VariablePolicyLib.inf
+  VariablePolicyHelperLib|MdeModulePkg/Library/VariablePolicyHelperLib/VariablePolicyHelperLib.inf
 
   UefiBootManagerLib|MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib.inf
   PlatformBootManagerLib|ArmPkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf
